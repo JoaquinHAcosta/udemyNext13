@@ -1,6 +1,11 @@
 import { PokemonGrid, PokemonsResponse, SimplePokemon } from '@/pokemons'
 import React from 'react'
 
+export const metadata = {
+  title: '151 Pokemons',
+  description: 'Lista de 151 pokemons',
+}
+
 const getPokemons = async (
   limit = 20,
   offset = 0
@@ -26,7 +31,7 @@ const PokemonPage = async () => {
     <div className="flex flex-col">
       <span className="text-5xl font-bold my-2 text-center">
         Listado de <span className="text-yellow-400 ring-black">Pokemons</span>{' '}
-        <small className="text-1sm">estático</small>
+        <small className="text-blue-500 text-1sm">estático</small>
       </span>
       <PokemonGrid pokemons={pokemons} />
     </div>
