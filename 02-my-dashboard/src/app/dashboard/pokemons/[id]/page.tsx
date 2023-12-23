@@ -42,6 +42,7 @@ const getPokemon = async (id: string): Promise<Pokemon> => {
 
 const PokemonPage = async ({ params }: Props) => {
   const pokemon = await getPokemon(params.id)
+
   return (
     <div className="flex mt-5 flex-col items-center text-slate-800">
       <div className="relative flex flex-col items-center rounded-[20px] w-[700px] mx-auto bg-white bg-clip-border shadow-lg p-3">

@@ -6,16 +6,16 @@ import { useState } from 'react'
 import { IoHeartOutline } from 'react-icons/io5'
 
 export const PokemonFavs = () => {
-  const favPokemons = useAppSelector((state) => Object.values(state.pokemons))
-  const [pokemons, setPokemons] = useState(favPokemons)
+  const favPokemons = useAppSelector((state) => state.pokemons)
+  const [pokemons, setPokemons] = useState(Object.values(favPokemons))
 
   return (
     <div>
-      {/* {
-      pokemons.length 
-      ? <NoFavorites>
-      : <PokemonGrid pokemons={pokemons} /> 
-    }*/}
+      {pokemons.length === 0 ? (
+        <NoFavorites />
+      ) : (
+        <PokemonGrid pokemons={pokemons} />
+      )}
     </div>
   )
 }
